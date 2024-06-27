@@ -1,0 +1,25 @@
+.hero-section {
+    perspective: 1000px;
+  }
+  
+  .moving-img {
+    transition: transform 0.3s ease;
+  }
+  
+  .moving-img:nth-child(2) {
+    /* Para la segunda imagen */
+    transition: transform 0.3s ease;
+  }
+  
+  .moving-img:nth-child(3) {
+    /* Para la tercera imagen */
+    transition: transform 0.3s ease;
+  }
+  
+  .moving-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .hero-section:hover .moving-img {
+    transform: translateY(-10px) translateX(10px);
+  }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroComponent } from './components/hero/hero.component';
+import { HeroComponent } from './pages/hero/hero.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';

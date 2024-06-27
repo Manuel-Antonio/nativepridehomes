@@ -1,0 +1,9 @@
+nav > a {
+    padding: 9px 12px;
+    display: inline-block;
+}
+nav > a:hover {
+    color: var(--color_white);
+    background-color: var(--color_secondary);
+   
+}
