@@ -1,16 +1,31 @@
 <section class="py-16 bg-gray-100">
   <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-8">Testimonios de Clientes</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded shadow">
-        <img src="assets/client1.jpg" alt="Cliente A" class="h-16 w-16 rounded-full mx-auto mb-4">
-        <p class="italic">"La empresa hizo un trabajo excepcional en nuestra casa. ¡Muy recomendados!"</p>
-        <h4 class="text-lg font-semibold mt-4">Cliente A</h4>
+    <h2 class="text-3xl font-bold mb-8">Client Testimonials</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonials Carousel -->
+      <div class="md:col-span-2 relative">
+        <div class="relative h-64 overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center" *ngIf="showTestimonial" [@testimonialAnimation]>
+            <div class="bg-white p-6 rounded shadow-lg max-w-lg mx-auto">
+              <img [src]="testimonials[currentIndex].img" [alt]="testimonials[currentIndex].clientName" class="h-16 w-16 rounded-full mx-auto mb-4">
+              <p class="italic">"{{ testimonials[currentIndex].feedback }}"</p>
+              <h4 class="text-lg font-semibold mt-4">{{ testimonials[currentIndex].clientName }}</h4>
+              <p class="text-sm text-gray-600 mt-2">{{ testimonials[currentIndex].projectDescription }}</p>
+            </div>
+          </div>
+          <button (click)="prevTestimonial()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 text-black py-2 px-4 rounded-full mx-2 hover:bg-gray-400 transition">‹</button>
+          <button (click)="nextTestimonial()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 text-black py-2 px-4 rounded-full mx-2 hover:bg-gray-400 transition">›</button>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded shadow">
-        <img src="assets/client2.jpg" alt="Cliente B" class="h-16 w-16 rounded-full mx-auto mb-4">
-        <p class="italic">"Profesionales y eficientes. El resultado fue impresionante."</p>
-        <h4 class="text-lg font-semibold mt-4">Cliente B</h4>
+
+      <!-- Testimonials Information -->
+      <div class="md:col-span-1">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">About Our Testimonials</h3>
+          <p class="mb-4">Discover what our clients have to say about their experiences with our construction projects.</p>
+          <p class="text-gray-600">Each testimonial reflects our commitment to quality, craftsmanship, and client satisfaction. Explore how we bring dreams to life through meticulous attention to detail.</p>
+        </div>
       </div>
     </div>
   </div>

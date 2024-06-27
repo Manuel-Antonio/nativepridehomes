@@ -1,23 +1,13 @@
+<!-- src/app/components/services/services.component.html -->
 <section class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Nuestros Servicios</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded shadow">
-          <img src="assets/architect-icon.png" alt="Diseño Arquitectónico" class="h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Diseño Arquitectónico</h3>
-          <p>Ofrecemos diseños innovadores y personalizados para cada cliente.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow">
-          <img src="assets/construction-icon.png" alt="Construcción de Viviendas" class="h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Construcción de Viviendas</h3>
-          <p>Construimos con los más altos estándares de calidad y seguridad.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow">
-          <img src="assets/remodel-icon.png" alt="Remodelaciones" class="h-16 mx-auto mb-4">
-          <h3 class="text-xl font-semibold mb-2">Remodelaciones</h3>
-          <p>Transformamos tu espacio actual en algo nuevo y espectacular.</p>
-        </div>
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let service of services" class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+        <img [src]="service.image" [alt]="service.title" class="service-image mb-4">
+        <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
+        <p class="text-gray-600 text-center">{{ service.description }}</p>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

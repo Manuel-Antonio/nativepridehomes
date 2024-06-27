@@ -1,0 +1,7 @@
+/* src/app/components/services/services.component.css */
+.service-image {
+    height: 200px; /* Adjust height as needed */
+    width: auto;  /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container keeping aspect ratio */
+  }
+  
